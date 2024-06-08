@@ -1,0 +1,44 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "lint:code": "eslint .",
+    "lint:code:fix": "npm run lint -- --fix",
+    "lint:style": "stylelint \"**/*.{scss,css,vue}\" --ignore-path .gitignore",
+    "lint:style:fix": "npm run lint:style -- --fix",
+    "lint": "npm run lint:code && npm run lint:style",
+    "lint:fix": "npm run lint:code:fix && npm run lint:style:fix",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky || true"
+  },
+  "dependencies": {
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "^8.57.0",
+    "@nuxt/eslint": "^0.3.13",
+    "commitlint": "^19.3.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "globals": "^15.4.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
+    "postcss-html": "^1.7.0",
+    "sass": "^1.77.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard-scss": "^13.1.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "npm run lint:code",
+    "*.vue": "npm run lint",
+    "*.{css,scss}": "stylelint"
+  }
+}
