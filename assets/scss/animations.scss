@@ -1,0 +1,17 @@
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes loading {
+  from {
+    background: var(--color-background);
+  }
+  to {
+    background: var(--color-background-mute);
+  }
+}

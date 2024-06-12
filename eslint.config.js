@@ -11,6 +11,10 @@ export default withNuxt(
     rules: {
       'no-unused-vars': 'warn',
       'vue/html-end-tags': 'error',
+      'vue/multi-word-component-names': 'off',
+      '@stylistic/arrow-parens': 'off',
+      '@stylistic/brace-style': 'off',
+      'vue/no-watch-after-await': 'off',
     },
   },
 )

@@ -1,0 +1,65 @@
+// link styles
+
+.c-link--base {
+  color: var(--color-text);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--color-text-hover);
+    text-decoration: underline;
+  }
+
+  &.c-link--active {
+    color: var(--color-indigo);
+    text-decoration: underline;
+  }
+}
+
+// base page layout styles
+
+.p-container {
+  max-width: var(--container-width);
+  margin: auto;
+}
+
+.p-page-header {
+  margin-bottom: var(--container-padding);
+}
+
+.c-button {
+  --color-button-background: var(--color-indigo);
+
+  font-size: 14px;
+  color: var(--color-white-soft);
+  border: none;
+  outline: none;
+  background: var(--color-button-background);
+  padding: 6px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+
+  &:hover {
+    --color-button-background: var(--color-indigo-accent);
+  }
+}
+
+.c-text-ellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c-error-page {
+  padding: 30px;
+  min-height: 500px;
+  max-height: 75vh;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
