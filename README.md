@@ -1,75 +1,12 @@
-# Nuxt 3 Minimal Starter
+## Общая информация
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- Из ssr режима были вырезаны страницы login и news как не требующиеся к индексации. По умолчанию robots установлен в noindex. Для страницы news-id я выбрал режим swr поскольку я предполагаю что новости обновляются нечасто и серверный перерендер требуется скорее как исключение, однако запрос все равно отправляется. Если это не требуется - можно выставить в isr
+- Virtual Scroll не был добавлен, так как число элементов которые можно получить используя бесплатную версию News API недостаточно велико чтобы оказывать серьезное негативное влияние на производительность страницы. Но при использовании большего числа записей он понадобится определенно.
+- Навешивание токена News API было скрыто от клиента за своеобразным proxy так как не относится к авторизационным данным, а статические ключики от клиента мне посчиталось важным изолировать.
+- pre-commit запускает lint-staged на eslint и stylelint, а также commitlint.
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Запуск проекта
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npm ci && npm run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
