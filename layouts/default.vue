@@ -20,7 +20,6 @@
     padding: var(--container-padding);
     width: 100%;
     flex: 1;
-    height: 200vh;
   }
 }
 </style>
